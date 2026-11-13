@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>إلك يا كل دنيتي ❤️</title>
+<style>
+*{box-sizing:border-box} body{margin:0;min-height:100vh;background:linear-gradient(145deg,#fff1f3,#fce7f3);font-family:system-ui,-apple-system,sans-serif;color:#512b38;display:grid;place-items:center;padding:22px}
+.card{width:min(100%,620px);background:#fff;border-radius:25px;padding:28px 24px;box-shadow:0 12px 45px #8d405322;text-align:center}
+h1{font-size:28px;margin:0 0 12px} p{line-height:2.15;font-size:18px;white-space:pre-wrap;text-align:right}
+input,button{font:inherit;border-radius:12px;padding:13px;width:100%;margin-top:12px}
+input{border:1px solid #e7b9c7;text-align:center} button{border:0;background:#b8325c;color:white;font-weight:700;cursor:pointer}
+#letter{display:none} .heart{font-size:34px} #error{color:#b4234b;min-height:24px}
+</style>
+</head>
+<body>
+<main class="card">
+<div class="heart">❤️</div>
+<section id="lock">
+<h1>في رسالة إلك...</h1>
+<p style="text-align:center">اكتبي كلمة السر لتفتحي المفاجأة ❤️</p>
+<form id="unlock">
+<input id="password" type="password" placeholder="كلمة السر" autocomplete="off" required>
+<button type="submit">افتحي رسالتك ❤️</button>
+</form>
+<div id="error" aria-live="polite"></div>
+</section>
+<section id="letter">
+<h1>إلى حبيبتي ومرتي ❤️</h1>
+<p>اليوم مانو يوم عادي هاد اليوم يلي نولدت في متل هل يوم من سنة كانت حياتي عبارة عن ضياع لحتى مالقيتك وحكيتك وقتا بلش عمري ونولدت حسيت بالحياة على ايدي هل يوم يلي صار عندي شغف بالحياة لعيشها يوم يلي لقيتك وحكيتك حسيت انو قدري مافي مهرب منو وتصيبي وقدرتي توقعي بحبك وتخليني اعشقك بتفاصيلك وكلشي فيكي كيف الوقت مرق بسرعة معك عشنا كلشي فيه حبيت اجمع كلشي عشنا سوا قدر الامكان في تفاصيل كتيرة مابتنتسا عشنا الحب والزعل وعشنا العشق والخناق عشنا كلشي حلو ووقنا بمراحل صعبة كتير وماكانت سهلة علينا ابدا بس كانت سنة ملياني اكشن فيها خطبنا وتزوجنا وحبينا ولتقينا هي السنة احلى ستة بعمري مابنساها شكرا يامرتي على كلشي قدمتيلي يا وعيشتيني يا بدي قلك اني بحبك كتير ياروحي وعمري وبعشقكك اني بموت عليكي هل سنة كنت بعيد بس بوعدك قريب كتير رح تكوني معي ونحتفل سوا ونكون مع بعض طول العمر نشالله ياروحي كل العمر سوا وبدال السنك نحتفل بالمية بحبك ياكل دنيتي ❤️</p>
+<div class="heart">بحبك يا كل دنيتي ❤️</div>
+</section>
+</main>
+<script>
+const expected = "بحبك 13.11.2026";
+document.getElementById("unlock").addEventListener("submit", function(e) {
+ e.preventDefault();
+ if (document.getElementById("password").value.trim() === expected) {
+  document.getElementById("lock").style.display = "none";
+  document.getElementById("letter").style.display = "block";
+ } else {
+  document.getElementById("error").textContent = "كلمة السر مو صحيحة، جربي مرة تانية ❤️";
+ }
+});
+</script>
+</body>
+</html>
